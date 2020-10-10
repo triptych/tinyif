@@ -22,7 +22,7 @@
 	<header class="bg-gray-100 h-screen flex justify-center items-center flex-col text-3xl">
 		<img src="/logo.svg" class="App-logo pointer-events-none m-4 h-64" alt="logo" />
 		<p>
-			Edit <code>src/App.svelte</code> and save to reload.
+			Edit <code>src/App.svelte</code> and save to reload. Edited
 		</p>
 		<a
 			class="text-orange-500"
