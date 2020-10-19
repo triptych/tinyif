@@ -8,6 +8,9 @@
 	.App-logo {
 		animation: App-logo-scale infinite 1.6s ease-in-out alternate;
 	}
+	.header {
+		display: none;
+	}
 	@keyframes App-logo-scale {
 		from {
 			transform: scale(1);
@@ -19,6 +22,7 @@
 </style>
 
 <div class="text-center font-serif">
+	<!--
 	<header class="bg-gray-100 h-screen flex justify-center items-center flex-col text-3xl">
 		<img src="/logo.svg" class="App-logo pointer-events-none m-4 h-64" alt="logo" />
 		<p>
@@ -32,5 +36,13 @@
 		>
 			{message}
 		</a>
+	</header>-->
+	<header>
+		<h1>Welcome to TinyIF</h1>
+		<p>
+			Tiny IF is a small three act story. 
+			You only have 3 "actions" you can use. 
+			Try to win using the right order of actions.
+		</p>
 	</header>
 </div>
