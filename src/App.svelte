@@ -5,6 +5,10 @@
 	import Controls from './components/Controls.svelte';
 	
 	const message = 'Learn Svelte';
+
+	function handleDirection(event){
+		console.log("handleDirection", event.detail.timeStamp)
+	}
 </script>
 
 <style>
@@ -34,6 +38,7 @@
 		background-attachment: fixed;
 		background-size: cover;
 		font-family:monospace;
+		color:bisque;
 	}
 
 </style>
@@ -64,7 +69,7 @@
 	</header>
 	<main role="main">
 		<Stage></Stage>
-		<Controls></Controls>
+		<Controls on:next={handleDirection}></Controls>
 	</main>
 	<Footer/>
 </div>

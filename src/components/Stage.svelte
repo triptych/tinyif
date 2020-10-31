@@ -34,6 +34,7 @@ function showLocation(location){
         padding: 1em;
         text-align: left;
         background-color: bisque;
+        color: black;
     }
 
 </style>

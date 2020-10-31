@@ -1,9 +1,23 @@
+<script>
+    import {createEventDispatcher} from "svelte";
+    
+    const dispatch = createEventDispatcher();
+
+    function nextText() {
+        console.log("nextText called with dispatch");
+        dispatch("next", {
+            timeStamp: new Date().getMilliseconds()
+        })
+    }
+
+</script>
 <style>
     .controls {
         flex: 10;
         border: 1px solid black;
         background-color:blanchedalmond;
         font-family: monospace;
+        color: black;
     }
 
     ul{
@@ -27,6 +41,8 @@
         </ul>
     </div>
     <div class="actions">
-        <button class="font-bold bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">Next</button>
+        <button 
+            class="font-bold bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded"
+            on:click={nextText}>[Next]</button>
     </div>
 </div>
