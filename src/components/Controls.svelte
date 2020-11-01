@@ -61,6 +61,13 @@
         background-color:blanchedalmond;
         font-family: monospace;
         color: black;
+        padding: 1em;
+    }
+    .controls small {
+        display: block;
+    }
+    .word-list{
+        padding: 1em;
     }
 
     ul{
@@ -70,8 +77,9 @@
 </style>
 <div class="controls">
     <h2>Tiny IF</h2>
-    <span>By Andrew Wooldridge</span>
+    <span>By <a href="https://github.com/triptych/tinyif">Andrew Wooldridge</a></span>
     <div class="buttons">
+        <small>(load/save/new) Not functional yet ...</small>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">New Game</button>
         <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Save Game</button>
         <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Load Game</button>
