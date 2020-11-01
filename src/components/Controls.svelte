@@ -74,6 +74,14 @@
         display: flex;
         justify-content: center;
     }
+
+    @media (max-width: 43em) {
+        .word-list ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+	}
 </style>
 <div class="controls">
     <h2>Tiny IF</h2>

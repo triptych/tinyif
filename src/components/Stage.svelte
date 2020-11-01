@@ -39,13 +39,20 @@ function showLocation(location){
         border: 2px inset grey;
     }
     .stage .content {
-        height: 50vh;
+        min-height: 50vh;
         width: 100%;
         padding: 1em;
         text-align: left;
         background-color: bisque;
         color: black;
     }
+
+    @media (max-width: 43em) {
+        .stage {
+            border: 1px solid red;
+            flex: 50;
+        }
+	}
 
 </style>
 
