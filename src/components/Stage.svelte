@@ -4,6 +4,7 @@ import { element_is } from "svelte/internal";
 import App from "../App.svelte";
 import Controls from "./Controls.svelte";
 import {story} from "../stores/story.js";
+import {state} from "../stores/state";
 
 let text = "loading...";
 export let location;
@@ -17,10 +18,17 @@ $: {
 
 function showLocation(location){
     console.log("ShowLocation location:", location);
+    console.log("ShowLocation $state:", $state);
     text = "";
     $story.forEach((itm, idx, arr) => {
         if(itm.id == location){
             text=itm.content;
+            if(itm.actions.length > 0 ){
+                $state.actions = true;
+            } else {
+                $state.actions = false;
+            }
+            $state = $state;
         }
     })
 }

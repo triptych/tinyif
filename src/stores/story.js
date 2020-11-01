@@ -3,6 +3,12 @@ export const story = writable([
     {
         id: "start",
         content: " Welcome to Tiny IF! This is a small experiment with interactive fiction and puzzle elements. Instead of having a set list of responses to every step of the story, you are given three 'words.' You may choose to use a word at every pause in the story. Or you might decide to wait until there is a good reason to use up one of your word actions. Choose wisely! ",
+        next: "start2",
+        actions:[]
+    },
+    {
+        id:"start2",
+        content: "This is a sample game. Click Next to get to a passage where you should choose an action.",
         next: "second",
         actions:[]
     },

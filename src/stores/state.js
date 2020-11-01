@@ -1,5 +1,6 @@
 import { writable } from "svelte/store";
 
 export let state = writable({
-    location: "start"
+    location: "start",
+    actions: false
 });
