@@ -85,7 +85,7 @@
 </style>
 <div class="controls">
     <h2>Tiny IF</h2>
-    <span>By <a href="https://github.com/triptych/tinyif">Andrew Wooldridge</a></span>
+
     <div class="buttons">
         <small>(load/save/new) Not functional yet ...</small>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">New Game</button>
