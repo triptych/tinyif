@@ -5,6 +5,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@snowpack/plugin-webpack": "^2.1.0",
     "svelte": "^3.21.0",
     "tailwindcss": "^1.4.6"
   },
