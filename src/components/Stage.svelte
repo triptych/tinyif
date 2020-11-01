@@ -6,9 +6,10 @@ import Controls from "./Controls.svelte";
 import {story} from "../stores/story.js";
 
 let text = "loading...";
-let location = "start";
+export let location;
 
 console.log( " story object:", $story);
+console.log("location:", location);
 
 $: {
     showLocation(location);

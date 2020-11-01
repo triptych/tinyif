@@ -3,11 +3,34 @@
 	import Footer from './components/Footer.svelte';
 	import Stage from './components/Stage.svelte';
 	import Controls from './components/Controls.svelte';
+
+	import {state} from './stores/state';
+	import {story} from "./stores/story";
 	
 	const message = 'Learn Svelte';
+	let loc="start";
 
-	function handleDirection(event){
-		console.log("handleDirection", event.detail.timeStamp)
+	function handleNext(event){
+		console.log("handleDirection", event.detail.timeStamp);
+		console.log("state:", $state );
+		console.log('story:', $story);
+		let newLoc = getNextFromNow();
+		loc = newLoc;
+	}
+
+	function getNextFromNow(){
+		console.log("getNext: state->", $state);
+		console.log("getNext: story->", $story);
+		let oldLocation = $state.location;
+		let newLocation = "";
+		$story.forEach((itm, idx, arr) => {
+        if(itm.id == oldLocation){
+            newLocation=itm.next;
+        	}
+		});
+		console.log("newLocation:", newLocation);
+		$state.location = newLocation;
+		return newLocation;
 	}
 </script>
 
@@ -68,8 +91,8 @@
 		</p>
 	</header>
 	<main role="main">
-		<Stage></Stage>
-		<Controls on:next={handleDirection}></Controls>
+		<Stage location={loc}></Stage>
+		<Controls on:next={handleNext} ></Controls>
 	</main>
 	<Footer/>
 </div>
