@@ -6,15 +6,25 @@
 
 	import {state} from './stores/state';
 	import {story} from "./stores/story";
+	import {actions} from "./stores/actions";
 	
 	const message = 'Learn Svelte';
 	let loc="start";
 
 	function handleNext(event){
-		console.log("handleDirection", event.detail.timeStamp);
+		console.log("handleNext timestamp: ", event.detail.timeStamp);
+		console.log("handleNext action: ", event.detail.action);
 		console.log("state:", $state );
 		console.log('story:', $story);
-		let newLoc = getNextFromNow();
+		console.log('actions:', $actions);
+		let newLoc = "";
+		if(event.detail.action != ""){
+			newLoc = event.detail.action;
+			$state.location = newLoc;
+		}else {
+			newLoc = getNextFromNow();
+		}
+		
 		loc = newLoc;
 	}
 
@@ -28,7 +38,7 @@
             newLocation=itm.next;
         	}
 		});
-		console.log("newLocation:", newLocation);
+		console.log("getNext newLocation:", newLocation);
 		$state.location = newLocation;
 		return newLocation;
 	}

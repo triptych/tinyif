@@ -16,6 +16,7 @@ $: {
 }
 
 function showLocation(location){
+    console.log("ShowLocation location:", location);
     text = "";
     $story.forEach((itm, idx, arr) => {
         if(itm.id == location){

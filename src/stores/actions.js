@@ -4,16 +4,16 @@ export let actions = writable([
     {
         id: "dodge",
         content: "dodge",
-        used: "false"
+        used: false
     },
     {
         id: "smirk",
         content: "smirk",
-        used: "false"
-    }
+        used: false
+    },
     {
         id: "kick",
         content: "kick",
-        used: "false"
+        used: false
     }
 ]);
